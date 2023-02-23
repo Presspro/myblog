@@ -27,5 +27,6 @@ export default new VueRouter({
       component:EditBlog
     }
   ],
-  mode: 'history'   //去掉地址里的#
+  mode: 'history',
+  base:'/hot/',   //去掉地址里的#
 })
