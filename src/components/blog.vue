@@ -2,9 +2,15 @@
   <el-container direction="vertical">
     <el-header>
       <el-row class="header-row" >
-        <el-col class="header-title" :span="6" >
+        <el-col class="header-title" :span="3" >
           <h1><router-link to="/">My Blog</router-link></h1>
         </el-col>
+        <el-col class="baogao" :span="3">
+          <button @click="jumpHtml">我的报告</button>
+        </el-col>        
+        <!-- <el-col class="header-title" :span="3" >
+          <router-link to="/baogao">我的报告</router-link>
+        </el-col> -->
         <el-col :span="8" :offset="2" class="search">
           <input class="search-input" placeholder="Search"  v-model="search"/>
           <i class="el-icon-search"></i>
@@ -12,6 +18,7 @@
         <el-col :span="3" :offset="4">
           <router-link to="/addBlog" class="add-blog-btn">写博客</router-link>
         </el-col>
+        
       </el-row>
     </el-header>
     <el-container direction="vertical" class="blog-main">
@@ -38,17 +45,30 @@
         return{
           search:''
         }
+      },
+      methods:{
+        jumpHtml(){
+          window.location.href="../static/baogao.html"
+        }
       }
     }
 </script>
 
 <style scoped>
+
   .el-header{
     width: 100%;
     line-height: 60px;
     background-color: #D2483E;
     color: #fff;
     text-align: center;
+  }
+  .el-link{
+    cursor: pointer;
+  }
+  .baogao{
+    text-decoration: underline;
+    color: #fff;
   }
   .header-row{
     max-width: 985px;

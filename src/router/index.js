@@ -4,6 +4,7 @@ import showBlog from '../components/content/showBlog'
 import AddBlog from '../components/content/addBlog'
 import Detail from '../components/content/detail'
 import EditBlog from '../components/content/editBlog'
+// import Baogao from '../components/comtent/baogao'
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,10 @@ export default new VueRouter({
       path: '/addBlog',
       component: AddBlog
     },
+    // {
+    //   path:'/baogao/:id',
+    //   component:Baogao
+    // },
     {
       path:'/blog/:id',
       component:Detail
