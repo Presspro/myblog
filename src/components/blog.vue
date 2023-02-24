@@ -6,11 +6,10 @@
           <h1><router-link to="/">My Blog</router-link></h1>
         </el-col>
         <el-col class="baogao" :span="3">
-          <button @click="jumpHtml">我的报告</button>
+          <!-- <button @click="jumpHtml">我的报告</button> -->
+          <a href="https://presspro.github.io/-/baogao.html">我的报告</a>
         </el-col>        
-        <!-- <el-col class="header-title" :span="3" >
-          <router-link to="/baogao">我的报告</router-link>
-        </el-col> -->
+
         <el-col :span="8" :offset="2" class="search">
           <input class="search-input" placeholder="Search"  v-model="search"/>
           <i class="el-icon-search"></i>
@@ -46,11 +45,11 @@
           search:''
         }
       },
-      methods:{
-        jumpHtml(){
-          window.location.href="../static/baogao.html"
-        }
-      }
+      // methods:{
+      //   jumpHtml(){
+      //     window.location.href="../static/baogao.html"
+      //   }
+      // }
     }
 </script>
 
